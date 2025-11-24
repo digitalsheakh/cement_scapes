@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://cement-scapes-gabm-g6mmrqhk6-sheakhs-projects-69ea6534.vercel.app'),
   title: 'Your Local Builder In Bedford & Surrounding Areas | Mohammed Miah | Cement Scapes',
   description: 'Professional builder in Bedford offering extensions, renovations, painting, block paving, flooring & more. NO CALL OUT CHARGE. Call Mohammed Miah: 07469 719389',
   keywords: 'builder bedford, builder near me, local builder bedford, building services bedford, extensions bedford, renovations bedford, painter bedford, block paving bedford, flooring bedford, loft conversions bedford, mohammed miah builder, cement scapes bedford, bedford builder, building contractor bedford, home improvements bedford, handyman bedford, builder kempston, builder ampthill, builder flitwick, builder biggleswade, builder sandy, builder luton, builder dunstable',
@@ -12,13 +13,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Your Local Builder In Bedford & Surrounding Areas | Mohammed Miah',
     description: 'Professional builder in Bedford offering extensions, renovations, painting, block paving, flooring & more. NO CALL OUT CHARGE. Call: 07469 719389',
-    url: 'https://www.cementscapes.com',
+    url: 'https://cement-scapes-gabm-g6mmrqhk6-sheakhs-projects-69ea6534.vercel.app',
     siteName: 'Cement Scapes',
     locale: 'en_GB',
     type: 'website',
     images: [
       {
-        url: '/images/logo/Simple Modern Black Blue Yellow Handyman House Tools Business Card.png',
+        url: 'https://cement-scapes-gabm-g6mmrqhk6-sheakhs-projects-69ea6534.vercel.app/images/logo/Simple Modern Black Blue Yellow Handyman House Tools Business Card.png',
         width: 1200,
         height: 630,
         alt: 'Cement Scapes - Your Local Builder in Bedford',
@@ -29,10 +30,10 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Your Local Builder In Bedford & Surrounding Areas | Mohammed Miah',
     description: 'Professional builder in Bedford offering extensions, renovations, painting, block paving, flooring & more. NO CALL OUT CHARGE.',
-    images: ['/images/logo/Simple Modern Black Blue Yellow Handyman House Tools Business Card.png'],
+    images: ['https://cement-scapes-gabm-g6mmrqhk6-sheakhs-projects-69ea6534.vercel.app/images/logo/Simple Modern Black Blue Yellow Handyman House Tools Business Card.png'],
   },
   alternates: {
-    canonical: 'https://www.cementscapes.com',
+    canonical: 'https://cement-scapes-gabm-g6mmrqhk6-sheakhs-projects-69ea6534.vercel.app',
   },
   other: {
     'geo.region': 'GB-BDF',
