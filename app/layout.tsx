@@ -38,8 +38,6 @@ export const metadata: Metadata = {
   other: {
     'geo.region': 'GB-BDF',
     'geo.placename': 'Bedford',
-    'geo.position': '52.1350;-0.4667',
-    'ICBM': '52.1350, -0.4667',
   },
 }
 
@@ -64,15 +62,8 @@ export default function RootLayout({
     },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "67 Gloucester Road",
       "addressLocality": "Bedford",
-      "postalCode": "MK42 9TP",
       "addressCountry": "GB"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "52.1350",
-      "longitude": "-0.4667"
     },
     "areaServed": [
       {
@@ -85,13 +76,8 @@ export default function RootLayout({
       }
     ],
     "serviceArea": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": "52.1350",
-        "longitude": "-0.4667"
-      },
-      "geoRadius": "25000"
+      "@type": "Place",
+      "name": "Bedford and surrounding areas"
     },
     "priceRange": "££",
     "currenciesAccepted": "GBP",

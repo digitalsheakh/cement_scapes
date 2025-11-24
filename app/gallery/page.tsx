@@ -8,15 +8,12 @@ export default function Gallery() {
 
   const portfolioImages = [
     "WhatsApp Image 2025-11-23 at 00.07.41 (1).jpeg",
-    "WhatsApp Image 2025-11-23 at 00.07.41.jpeg",
     "WhatsApp Image 2025-11-23 at 00.07.42 (1).jpeg",
     "WhatsApp Image 2025-11-23 at 00.07.42 (2).jpeg",
-    "WhatsApp Image 2025-11-23 at 00.07.42.jpeg",
     "WhatsApp Image 2025-11-23 at 00.16.39.jpeg",
     "WhatsApp Image 2025-11-23 at 00.16.40.jpeg",
     "WhatsApp Image 2025-11-23 at 00.16.41 (1).jpeg",
     "WhatsApp Image 2025-11-23 at 00.16.41.jpeg",
-    "WhatsApp Image 2025-11-23 at 00.18.04 (1).jpeg",
     "WhatsApp Image 2025-11-23 at 00.18.04 (2).jpeg",
     "WhatsApp Image 2025-11-23 at 00.18.04.jpeg"
   ]
