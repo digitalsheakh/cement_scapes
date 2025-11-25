@@ -42,14 +42,17 @@ export default function Gallery() {
               </div>
               <div className="min-w-0 flex-1">
                 <div className="font-bold text-base sm:text-2xl text-gray-900 leading-tight">Cement Scapes</div>
-                <div className="text-xs sm:text-base text-gray-700 font-medium leading-tight">Mohammed Miah - Your Local Builder</div>
+                <div className="text-xs sm:text-base text-gray-700 font-medium leading-tight">
+                  <span className="sm:hidden">Your Local Builder</span>
+                  <span className="hidden sm:inline">Mohammed Miah - Your Local Builder</span>
+                </div>
               </div>
             </div>
             
             <div className="flex items-center space-x-2 sm:space-x-6 flex-shrink-0">
               <Link 
                 href="/" 
-                className="text-gray-700 hover:text-brand-blue px-2 sm:px-4 py-2 text-sm sm:text-lg font-semibold transition-colors rounded-lg hover:bg-gray-50"
+                className="hidden sm:block text-gray-700 hover:text-brand-blue px-2 sm:px-4 py-2 text-sm sm:text-lg font-semibold transition-colors rounded-lg hover:bg-gray-50"
               >
                 Home
               </Link>
