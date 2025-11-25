@@ -28,30 +28,41 @@ export default function Gallery() {
         </a>
       </div>
 
-      {/* Header */}
-      <header className="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
-          <div className="flex justify-between items-center">
-            <Link href="/" className="flex items-center space-x-2 sm:space-x-4">
-              <img 
-                src="/images/logo/Simple Modern Black Blue Yellow Handyman House Tools Business Card.png" 
-                alt="Cement Scapes - Builder in Bedford Logo" 
-                className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
-              />
-              <div>
-                <h1 className="text-lg sm:text-xl font-bold text-brand-dark">Cement Scapes</h1>
-                <p className="text-xs sm:text-sm text-gray-600">Mohammed Miah - Your Local Builder in Bedford</p>
+      {/* Navigation */}
+      <nav className="bg-white border-b-2 border-gray-100 sticky top-0 z-50 shadow-lg">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6">
+          <div className="flex justify-between items-center h-16 sm:h-24">
+            <div className="flex items-center space-x-2 sm:space-x-4">
+              <div className="w-10 h-10 sm:w-14 sm:h-14 bg-white border-2 border-gray-200 rounded-lg sm:rounded-xl flex items-center justify-center shadow-sm">
+                <img 
+                  src="/images/logo/logo.png" 
+                  alt="Cement Scapes Logo" 
+                  className="w-6 h-6 sm:w-10 sm:h-10 object-contain"
+                />
               </div>
-            </Link>
-            <a 
-              href="tel:07469719389" 
-              className="bg-brand-blue text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg font-medium hover:bg-brand-blue/90 transition-colors shadow-md text-sm sm:text-base"
-            >
-              Call Now
-            </a>
+              <div className="min-w-0 flex-1">
+                <div className="font-bold text-base sm:text-2xl text-gray-900 leading-tight">Cement Scapes</div>
+                <div className="text-xs sm:text-base text-gray-700 font-medium leading-tight">Mohammed Miah - Your Local Builder</div>
+              </div>
+            </div>
+            
+            <div className="flex items-center space-x-2 sm:space-x-6 flex-shrink-0">
+              <Link 
+                href="/" 
+                className="text-gray-700 hover:text-brand-blue px-2 sm:px-4 py-2 text-sm sm:text-lg font-semibold transition-colors rounded-lg hover:bg-gray-50"
+              >
+                Home
+              </Link>
+              <a 
+                href="tel:07469719389" 
+                className="bg-brand-blue text-white px-3 sm:px-8 py-2 sm:py-4 rounded-lg sm:rounded-xl text-sm sm:text-lg font-bold hover:bg-brand-blue/90 transition-all duration-300 hover:shadow-lg"
+              >
+                Call Now
+              </a>
+            </div>
           </div>
         </div>
-      </header>
+      </nav>
 
       {/* Gallery Content */}
       <div className="max-w-7xl mx-auto px-6 py-16">

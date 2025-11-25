@@ -95,32 +95,32 @@ export default function Home() {
 
       {/* Navigation */}
       <nav className="bg-white border-b-2 border-gray-100 sticky top-0 z-50 shadow-lg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex justify-between items-center h-18 sm:h-24">
-            <div className="flex items-center space-x-4">
-              <div className="w-14 h-14 bg-white border-2 border-gray-200 rounded-xl flex items-center justify-center shadow-sm">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6">
+          <div className="flex justify-between items-center h-16 sm:h-24">
+            <div className="flex items-center space-x-2 sm:space-x-4">
+              <div className="w-10 h-10 sm:w-14 sm:h-14 bg-white border-2 border-gray-200 rounded-lg sm:rounded-xl flex items-center justify-center shadow-sm">
                 <img 
                   src="/images/logo/logo.png" 
                   alt="Cement Scapes Logo" 
-                  className="w-10 h-10 object-contain"
+                  className="w-6 h-6 sm:w-10 sm:h-10 object-contain"
                 />
               </div>
-              <div>
-                <div className="font-bold text-xl sm:text-2xl text-gray-900">Cement Scapes</div>
-                <div className="text-sm sm:text-base text-gray-700 font-medium">Mohammed Miah - Your Local Builder</div>
+              <div className="min-w-0 flex-1">
+                <div className="font-bold text-base sm:text-2xl text-gray-900 leading-tight">Cement Scapes</div>
+                <div className="text-xs sm:text-base text-gray-700 font-medium leading-tight">Mohammed Miah - Your Local Builder</div>
               </div>
             </div>
             
-            <div className="flex items-center space-x-3 sm:space-x-6">
+            <div className="flex items-center space-x-2 sm:space-x-6 flex-shrink-0">
               <Link 
                 href="/gallery" 
-                className="text-gray-700 hover:text-brand-blue px-4 py-2 text-base sm:text-lg font-semibold transition-colors rounded-lg hover:bg-gray-50"
+                className="text-gray-700 hover:text-brand-blue px-2 sm:px-4 py-2 text-sm sm:text-lg font-semibold transition-colors rounded-lg hover:bg-gray-50"
               >
                 Gallery
               </Link>
               <a 
                 href="tel:07469719389" 
-                className="bg-brand-blue text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-bold hover:bg-brand-blue/90 transition-all duration-300 hover:shadow-lg"
+                className="bg-brand-blue text-white px-3 sm:px-8 py-2 sm:py-4 rounded-lg sm:rounded-xl text-sm sm:text-lg font-bold hover:bg-brand-blue/90 transition-all duration-300 hover:shadow-lg"
               >
                 Call Now
               </a>
