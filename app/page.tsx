@@ -7,6 +7,7 @@ export default function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [isMobile, setIsMobile] = useState(false)
   const [showPopup, setShowPopup] = useState(false)
+  const [popupShown, setPopupShown] = useState(false)
 
   const services = [
     {
@@ -76,14 +77,17 @@ export default function Home() {
     return () => clearInterval(interval)
   }, [portfolioImages.length])
 
-  // Show popup after 10 seconds
+  // Show popup after 5 seconds (only once per session)
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowPopup(true)
-    }, 10000) // Show after 10 seconds
+    if (!popupShown) {
+      const timer = setTimeout(() => {
+        setShowPopup(true)
+        setPopupShown(true)
+      }, 5000) // Show after 5 seconds
 
-    return () => clearTimeout(timer)
-  }, [])
+      return () => clearTimeout(timer)
+    }
+  }, [popupShown])
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % portfolioImages.length)
@@ -382,7 +386,7 @@ export default function Home() {
               <div className="text-center mb-12 sm:mb-16">
                 <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 tracking-tight">Contact Information</h3>
                 <p className="text-xl sm:text-2xl text-gray-800 max-w-2xl mx-auto leading-relaxed">
-                  Mohammed Miah - Your trusted Bedford builder
+                  Mohammed Miah
                 </p>
               </div>
               
@@ -452,34 +456,46 @@ export default function Home() {
 
       {/* House Issues Popup */}
       {showPopup && (
-        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-3xl p-6 sm:p-8 max-w-md mx-auto shadow-2xl border-2 border-gray-100">
+        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 animate-fade-in">
+          <div className="bg-white rounded-3xl p-6 sm:p-8 max-w-md mx-auto shadow-2xl border-2 border-gray-100 animate-slide-up relative">
+            {/* Close Button */}
+            <button 
+              onClick={() => setShowPopup(false)}
+              className="absolute top-4 right-4 w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-colors"
+            >
+              <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
             <div className="text-center">
-              <div className="w-16 h-16 bg-brand-blue rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
-                </svg>
+              <div className="w-20 h-20 bg-white border-2 border-gray-200 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg animate-bounce-gentle">
+                <img 
+                  src="/images/logo/logo.png" 
+                  alt="Cement Scapes Logo" 
+                  className="w-12 h-12 object-contain"
+                />
               </div>
               
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 animate-fade-in-delay">
                 Got Any Issues in Your House?
               </h3>
               
-              <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">
+              <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed animate-fade-in-delay-2">
                 From small repairs to major renovations, no job is too big or too small. Give us a call for a FREE consultation!
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-in-delay-3">
                 <a 
                   href="tel:07469719389"
-                  className="bg-brand-blue text-white px-6 py-3 rounded-xl font-bold text-base hover:bg-brand-blue/90 transition-colors flex-1"
+                  className="bg-brand-blue text-white px-6 py-3 rounded-xl font-bold text-base hover:bg-brand-blue/90 hover:scale-105 transition-all duration-300 flex-1"
                   onClick={() => setShowPopup(false)}
                 >
                   Call Now: 07469 719389
                 </a>
                 <button 
                   onClick={() => setShowPopup(false)}
-                  className="bg-gray-100 text-gray-700 px-6 py-3 rounded-xl font-semibold text-base hover:bg-gray-200 transition-colors"
+                  className="bg-gray-100 text-gray-700 px-6 py-3 rounded-xl font-semibold text-base hover:bg-gray-200 hover:scale-105 transition-all duration-300"
                 >
                   Maybe Later
                 </button>

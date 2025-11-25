@@ -32,7 +32,7 @@ export default function Gallery() {
       <nav className="bg-white border-b-2 border-gray-100 sticky top-0 z-50 shadow-lg">
         <div className="max-w-7xl mx-auto px-3 sm:px-6">
           <div className="flex justify-between items-center h-16 sm:h-24">
-            <div className="flex items-center space-x-2 sm:space-x-4">
+            <Link href="/" className="flex items-center space-x-2 sm:space-x-4 hover:opacity-80 transition-opacity">
               <div className="w-10 h-10 sm:w-14 sm:h-14 bg-white border-2 border-gray-200 rounded-lg sm:rounded-xl flex items-center justify-center shadow-sm">
                 <img 
                   src="/images/logo/logo.png" 
@@ -47,7 +47,7 @@ export default function Gallery() {
                   <span className="hidden sm:inline">Mohammed Miah - Your Local Builder</span>
                 </div>
               </div>
-            </div>
+            </Link>
             
             <div className="flex items-center space-x-2 sm:space-x-6 flex-shrink-0">
               <Link 
