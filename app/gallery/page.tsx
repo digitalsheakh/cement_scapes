@@ -92,12 +92,12 @@ export default function Gallery() {
         </div>
 
         {/* Contact CTA */}
-        <div className="text-center mt-16 bg-gray-50 p-12 rounded-2xl">
-          <h3 className="text-2xl font-bold text-brand-dark mb-4">Got Your Next Job for Me?</h3>
-          <p className="text-lg text-gray-600 mb-8">I'm ready to bring the same quality to your project. Call Mohammed Miah today!</p>
+        <div className="text-center mt-16 bg-gray-50 p-6 sm:p-12 rounded-2xl">
+          <h3 className="text-xl sm:text-2xl font-bold text-brand-dark mb-3 sm:mb-4">Got Your Next Job for Me?</h3>
+          <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">I'm ready to bring the same quality to your project. Call Mohammed Miah today!</p>
           <a 
             href="tel:07469719389" 
-            className="bg-brand-blue text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-brand-blue/90 transition-colors"
+            className="bg-brand-blue text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-brand-blue/90 transition-colors"
           >
             Call Now: 07469 719389
           </a>
