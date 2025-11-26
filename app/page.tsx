@@ -7,7 +7,7 @@ export default function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [isMobile, setIsMobile] = useState(false)
   const [showPopup, setShowPopup] = useState(false)
-  const [popupDismissed, setPopupDismissed] = useState(false)
+  const [popupDismissed, setPopupDismissed] = useState(true) // Start as true to prevent flash
 
   const services = [
     {
@@ -68,6 +68,14 @@ export default function Home() {
     return () => window.removeEventListener('resize', checkMobile)
   }, [])
 
+  // Check if popup has been shown in this session (sessionStorage)
+  useEffect(() => {
+    const hasSeenPopup = sessionStorage.getItem('cementScapesPopupSeen')
+    if (!hasSeenPopup) {
+      setPopupDismissed(false) // Allow popup to show
+    }
+  }, [])
+
   // Auto-slide functionality
   useEffect(() => {
     const interval = setInterval(() => {
@@ -92,6 +100,8 @@ export default function Home() {
   const handlePopupClose = () => {
     setShowPopup(false)
     setPopupDismissed(true)
+    // Save to sessionStorage so popup won't show again in this session
+    sessionStorage.setItem('cementScapesPopupSeen', 'true')
   }
 
   const nextImage = () => {
